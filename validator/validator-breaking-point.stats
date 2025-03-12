@@ -1,0 +1,29 @@
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/validator -c 70 -d 30s --body @aggregator-req150.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/traces/validator for 30s using 120 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed       3.3s
+  Count          350
+    4xx          350
+  RPS        104.009
+  Reads    0.019MB/s
+  Writes   3.389MB/s
+
+Statistics     Min       Mean      StdDev       Max
+  Latency   233.559ms  515.597ms  481.463ms  1.668937s
+  RPS         45.95     116.97     100.43     187.99
+
+Latency Percentile:
+  P50           P75        P90        P95        P99       P99.9     P99.99
+  298.943ms  357.837ms  1.623481s  1.657373s  1.668741s  1.668937s  1.668937s
+
+Latency Histogram:
+  324.442ms  294  84.00%
+  696.775ms    7   2.00%
+  1.442914s    3   0.86%
+  1.608756s    1   0.29%
+  1.621708s    5   1.43%
+  1.623667s    8   2.29%
+  1.65737s    21   6.00%
+  1.668677s   11   3.14%

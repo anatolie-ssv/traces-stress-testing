@@ -1,0 +1,125 @@
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 10 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 10 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed        30s
+  Count           88
+    2xx           88
+  RPS          2.933
+  Reads    8.578MB/s
+  Writes   0.016MB/s
+
+Statistics     Min       Mean      StdDev       Max
+  Latency   1.578664s  3.224962s  625.374ms  6.889198s
+  RPS         0.49       3.01       0.88         5
+
+Latency Percentile:
+  P50           P75        P90        P95        P99       P99.9     P99.99
+  3.207563s  3.245653s  3.301565s  3.669047s  6.889198s  6.889198s  6.889198s
+
+Latency Histogram:
+  1.743029s   2   2.27%
+  2.240323s   2   2.27%
+  2.709116s   5   5.68%
+  3.082203s   4   4.55%
+  3.174148s  34  38.64%
+  3.305176s  39  44.32%
+  6.243471s   1   1.14%
+  6.889198s   1   1.14%
+
+---
+
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 20 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 20 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed        30s
+  Count           89
+    2xx           89
+  RPS          2.966
+  Reads    8.632MB/s
+  Writes   0.018MB/s
+
+Statistics    Min       Mean      StdDev       Max
+  Latency   2.05066s  2.594875s  280.274ms  4.162839s
+  RPS         0.99       3.1       0.62         4
+
+Latency Percentile:
+  P50           P75        P90        P95        P99       P99.9     P99.99
+  2.573269s  2.603215s  2.757052s  3.120041s  4.162839s  4.162839s  4.162839s
+
+Latency Histogram:
+  2.05066s    1   1.12%
+  2.217099s   3   3.37%
+  2.398078s   7   7.87%
+  2.552141s  48  53.93%
+  2.630037s  25  28.09%
+  3.088537s   3   3.37%
+  3.773282s   1   1.12%
+  4.162839s   1   1.12%
+
+---
+
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 30 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 30 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed        30s
+  Count           71
+    2xx           71
+  RPS          2.367
+  Reads    6.930MB/s
+  Writes   0.018MB/s
+
+Statistics     Min        Mean      StdDev       Max
+  Latency   2.207678s  10.272085s  4.464701s  18.354131s
+  RPS         0.25        3.33       2.55        8.99
+
+Latency Percentile:
+  P50           P75         P90         P95         P99        P99.9       P99.99
+  8.855389s  14.715021s  17.058215s  17.524925s  18.354131s  18.354131s  18.354131s
+
+Latency Histogram:
+  4.941462s   11  15.49%
+  6.596448s   13  18.31%
+  8.38894s    11  15.49%
+  9.760251s   10  14.08%
+  11.97878s    5   7.04%
+  14.297677s   6   8.45%
+  16.030191s   6   8.45%
+  17.496242s   9  12.68%
+
+---
+
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 50 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 50 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed        30s
+  Count           64
+    2xx           64
+  RPS          2.133
+  Reads    6.208MB/s
+  Writes   0.026MB/s
+
+Statistics     Min        Mean      StdDev       Max
+  Latency   4.087848s  21.011667s  7.310306s  27.711609s
+  RPS         0.16        4.04       6.31       23.99
+
+Latency Percentile:
+  P50            P75         P90         P95         P99        P99.9       P99.99
+  25.046509s  27.035801s  27.450246s  27.601273s  27.711609s  27.711609s  27.711609s
+
+Latency Histogram:
+  8.241763s   10  15.63%
+  11.566697s   4   6.25%
+  16.039358s   5   7.81%
+  18.071786s   4   6.25%
+  19.647801s   3   4.69%
+  23.680235s   2   3.13%
+  25.634594s  15  23.44%
+  27.274074s  21  32.81%

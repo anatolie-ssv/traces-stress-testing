@@ -1,0 +1,27 @@
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/decideds -c 40 -d 40s --body @req300.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/decideds for 40s using 40 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed        40s
+  Count          535
+    4xx          535 <-------------
+  RPS         13.374
+  Reads    0.002MB/s
+  Writes   0.056MB/s
+
+Statistics     Min       Mean      StdDev       Max
+  Latency   211.006ms  256.809ms  192.486ms  1.350704s
+  RPS         5.99       56.71      25.66      78.93
+
+Latency Percentile:
+  P50           P75        P90        P95        P99       P99.9     P99.99
+  221.102ms  226.545ms  239.618ms  260.887ms  1.350626s  1.350704s  1.350704s
+
+Latency Histogram:
+  222.199ms  425  79.44%
+  248.625ms   85  15.89%
+  554.606ms   15   2.80%
+  1.350527s    3   0.56%
+  1.350622s    4   0.75%
+  1.35067s     3   0.56%

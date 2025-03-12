@@ -1,0 +1,55 @@
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/decideds -c 20 -d 60s --body @req300.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/decideds for 1m0s using 20 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed       1m0s
+  Count           11
+    2xx           11
+  RPS          0.183
+  Reads    0.020MB/s
+  Writes   0.006MB/s
+
+Statistics     Min        Mean       StdDev       Max
+  Latency   1.613156s  34.509992s  17.558373s  59.094118s
+  RPS         0.04        0.72        0.78         2
+
+Latency Percentile:
+  P50            P75         P90         P95         P99        P99.9       P99.99
+  39.905716s  44.699469s  46.635229s  59.094118s  59.094118s  59.094118s  59.094118s
+
+Latency Histogram:
+  7.321588s   2  18.18%
+  25.342594s  2  18.18%
+  39.409175s  1   9.09%
+  39.905716s  1   9.09%
+  41.218962s  1   9.09%
+  43.318879s  1   9.09%
+  45.667349s  2  18.18%
+  59.094118s  1   9.09%
+
+---
+
+Repo/stress-testing → plow http://localhost:16000/v1/exporter/decideds -c 30 -d 60s --body @req300.json -T 'application/json' -m GET
+Benchmarking http://localhost:16000/v1/exporter/decideds for 1m0s using 30 connection(s).
+@ Real-time charts is listening on http://[::]:18888
+
+Summary:
+  Elapsed       1m0s
+  Count            2
+    2xx            2
+  RPS          0.033
+  Reads    0.004MB/s
+  Writes   0.006MB/s
+
+Statistics     Min        Mean       StdDev       Max
+  Latency   33.293274s  44.44421s  15.769804s  55.595146s
+  RPS          0.02       0.03        0.01        0.04
+
+Latency Percentile:
+  P50            P75         P90         P95         P99        P99.9       P99.99
+  33.293274s  55.595146s  55.595146s  55.595146s  55.595146s  55.595146s  55.595146s
+
+Latency Histogram:
+  33.293274s  1  50.00%
+  55.595146s  1  50.00%
