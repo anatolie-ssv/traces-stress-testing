@@ -1,4 +1,4 @@
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 10 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/committee -c 10 -d 30s --body @committee/request.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 10 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -30,7 +30,7 @@ Latency Histogram:
 
 ---
 
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 20 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/committee -c 20 -d 30s --body @committee/request.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 20 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -62,7 +62,7 @@ Latency Histogram:
 
 ---
 
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 30 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/committee -c 30 -d 30s --body @committee/request.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 30 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -94,7 +94,7 @@ Latency Histogram:
 
 ---
 
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/committee -c 50 -d 30s --body @committee-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/committee -c 50 -d 30s --body @committee/request.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/committee for 30s using 50 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 

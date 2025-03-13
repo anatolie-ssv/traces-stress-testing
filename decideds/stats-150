@@ -1,4 +1,4 @@
-plow http://localhost:16000/v1/exporter/decideds -c 20 -d 30s --body @req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/decideds -c 20 -d 30s --body @decideds/request-150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/decideds for 30s using 20 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -30,7 +30,7 @@ Latency Histogram:
 
 ---
 
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/decideds -c 30 -d 60s --body @req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/decideds -c 30 -d 60s --body @decideds/request-150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/decideds for 1m0s using 30 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 

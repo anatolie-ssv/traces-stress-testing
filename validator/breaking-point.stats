@@ -1,4 +1,3 @@
-Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/validator -c 70 -d 30s --body @aggregator-req150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/validator for 30s using 120 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 

@@ -2,7 +2,7 @@
 
 ## Tool
 
-`go install github.com/six-ddc/plow@latest`
+`go get -tool github.com/six-ddc/plow@latest`
 
 The request contains a set of validator pubkeys or committee IDs and a range of 150-300 slots.
 

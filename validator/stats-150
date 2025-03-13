@@ -1,4 +1,4 @@
-plow http://localhost:16000/v1/exporter/traces/validator -c 30 -d 30s --body @aggregator-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/validator -c 30 -d 30s --body @validator/aggregator-req150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/validator for 30s using 30 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -30,7 +30,7 @@ Latency Histogram:
 
 ---
 
- Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/validator -c 60 -d 30s --body @aggregator-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/validator -c 60 -d 30s --body @validator/aggregator-req150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/validator for 30s using 60 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
@@ -62,7 +62,7 @@ Latency Histogram:
 
   --
 
-  Repo/stress-testing → plow http://localhost:16000/v1/exporter/traces/validator -c 60 -d 30s --body @aggregator-req150.json -T 'application/json' -m GET
+go tool plow http://localhost:16000/v1/exporter/traces/validator -c 60 -d 30s --body @validator/aggregator-req150.json -T 'application/json' -m GET
 Benchmarking http://localhost:16000/v1/exporter/traces/validator for 30s using 60 connection(s).
 @ Real-time charts is listening on http://[::]:18888
 
